@@ -27,11 +27,16 @@ public class HomePage extends BasePage{
        return wait.until(ExpectedConditions.visibilityOf(logo)).isDisplayed();
     }
     public void clickOnSandySetupLink(){
-        wait.until(ExpectedConditions.elementToBeClickable(sandySetUpLink)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(sandySetUpLink));
+        staticWait(2000);
+        sandySetUpLink.click();
     }
     public void clickOnSandySetUPOptions(String linkToBeClicked){
         wait.until(ExpectedConditions.visibilityOf(sandySetUpLinkSubMenusComponent));
-        actions.moveToElement(driver.findElement(By.xpath("//li//a[text()='"+linkToBeClicked+"']"))).click().build().perform();
+        staticWait(2000);
+        WebElement element=driver.findElement(By.xpath("//li//a[text()='"+linkToBeClicked+"']"));
+        System.out.println(element);
+        actions.moveToElement(element).click().build().perform();
 
     }
 }

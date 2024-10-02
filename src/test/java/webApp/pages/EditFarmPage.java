@@ -38,7 +38,7 @@ public class EditFarmPage extends BasePage{
     }
     public String getSuccessMessage(){
         wait.until(ExpectedConditions.invisibilityOf(loader));
-        wait.until(ExpectedConditions.visibilityOf(successMessageFrame));
+        wait.until(ExpectedConditions.invisibilityOf(successMessageFrame));
         return successMessage.getText();
 
     }

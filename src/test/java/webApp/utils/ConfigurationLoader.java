@@ -26,6 +26,11 @@ public class ConfigurationLoader {
         if(prop != null) return prop;
         else throw new RuntimeException("property baseUrl is not specified in the stage_config.properties file");
     }
+    public String getBrowser(){
+        String prop = properties.getProperty("browser");
+        if(prop != null) return prop;
+        else throw new RuntimeException("property baseUrl is not specified in the stage_config.properties file");
+    }
     public String getUserName(){
         String prop = properties.getProperty("userName");
         if(prop != null) return prop;

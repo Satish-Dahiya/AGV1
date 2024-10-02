@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 
 import webApp.context.TestContext;
 import webApp.factory.DriverFactory;
+import webApp.utils.ConfigurationLoader;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,15 +21,15 @@ public class MyHooks {
         this.context = context;
     }
 
-    @Before("@componentTest")
+    @Before("@FiledSetUp")
     public void before(Scenario scenario){
         System.out.println("BEFORE: THREAD ID : " + Thread.currentThread().getId() + "," +
                 "SCENARIO NAME: " + scenario.getName());
-        driver = DriverFactory.initializeDriver(System.getProperty("browser", "chrome"));
+        driver = DriverFactory.initializeDriver(System.getProperty("browser", ConfigurationLoader.getInstance().getBrowser()));
         context.driver = driver;
     }
 
-    @After("@componentTest")
+    @After("@FiledSetUp")
     public void after(Scenario scenario){
         System.out.println("AFTER: THREAD ID : " + Thread.currentThread().getId() + "," +
                 "SCENARIO NAME: " + scenario.getName());

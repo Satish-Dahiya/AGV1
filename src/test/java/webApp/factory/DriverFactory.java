@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.HashMap;
@@ -29,8 +31,10 @@ public class DriverFactory {
                 driver = new ChromeDriver();
             break;
             case "firefox":
-             //   WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
+                FirefoxOptions firefoxOptions=new FirefoxOptions();
+                FirefoxProfile firefoxProfile=new FirefoxProfile();
+                firefoxOptions.setProfile(firefoxProfile);
+                driver = new FirefoxDriver(firefoxOptions);
                 break;
              default:throw new IllegalStateException("INVALID BROWSER: " + browser);
         }
