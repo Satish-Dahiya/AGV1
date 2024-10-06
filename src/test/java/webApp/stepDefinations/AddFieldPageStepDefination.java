@@ -65,7 +65,7 @@ public class AddFieldPageStepDefination {
 
     @And("I select to Date Range as {string}")
     public void iSelectToDateRangeAs(String toDate) {
-        addFieldPage.setSinceValue(toDate);
+        addFieldPage.setSinceValue1(toDate);
     }
 
     @And("select primary land category two as {string}")
@@ -75,6 +75,6 @@ public class AddFieldPageStepDefination {
 
     @And("I select from Date Range as {string}")
     public void iSelectFromDateRangeAs(String fromDate) {
-        addFieldPage.setSinceValue1(fromDate);
+        addFieldPage.setSinceValue(fromDate);
     }
 }

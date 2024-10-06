@@ -9,11 +9,14 @@ public class PageFactory {
     private static HomePage homePage;
     private static AddFarmModalPage addFarmModalPage;
     private static EnterPriseDataPage enterPriseDataPage;
-private static FarmSetUpPage farmSetUpPage;
+   private static FarmSetUpPage farmSetUpPage;
     private static EditFarmPage editFarmPage;
     private static FieldSetUpPage fieldSetUpPage;
     private static AddFieldPage addFieldPage;
     private static FieldListPage fieldListPage ;
+    private static ActivityServicePage activityServicePage;
+    private static CarbonSetupPage carbonSetupPage;
+    private static CropingSetupPage cropingSetupPage;
 
     private static EditFieldPage editFieldPage;
     public static LoginPage getLoginPage(WebDriver driver){
@@ -48,5 +51,14 @@ private static FarmSetUpPage farmSetUpPage;
     }
     public static EditFieldPage getEditFieldPage(WebDriver driver){
         return editFieldPage == null ? new EditFieldPage(driver) : editFieldPage;
+    }
+    public static ActivityServicePage getActivityServicePage(WebDriver driver){
+        return activityServicePage == null ? new ActivityServicePage(driver) : activityServicePage;
+    }
+    public static CarbonSetupPage getCarbonSetupPage(WebDriver driver){
+        return carbonSetupPage == null ? new CarbonSetupPage(driver) : carbonSetupPage;
+    }
+    public static CropingSetupPage getCroppingSetupPage(WebDriver driver){
+        return cropingSetupPage == null ? new CropingSetupPage(driver) : cropingSetupPage;
     }
 }

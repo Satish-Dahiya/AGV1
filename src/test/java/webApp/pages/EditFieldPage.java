@@ -1,5 +1,6 @@
 package webApp.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,6 +22,18 @@ public class EditFieldPage extends BasePage{
     private WebElement successMessageFrame;
     @FindBy(xpath = "//div[text()='Your records have been successfully updated.']")
     private WebElement successMessage;
+    @FindBy(xpath = "//input[@id='fieldSize']")
+    private WebElement fieldSizeTextBox;
+    @FindBy(xpath = "(//div[contains(@id,'react-select') and text()='Select management type'])[1]")
+    private WebElement selectManagementDDL;
+    @FindBy(xpath = "//div[contains(@id,'react-select') and text()='Select soil peat']")
+    private WebElement selectSoilPeat;
+    @FindBy(xpath = "//div[contains(@id,'react-select') and text()='Select land use change']")
+    private WebElement landUseLocation;
+    @FindBy(xpath = "(//div[contains(@id,'react-select') and text()='Since'])[1]")
+    private WebElement since;
+    @FindBy(xpath = "(//div[contains(@id,'react-select') and text()='Add Primary land use'])[1]")
+    private WebElement primaryLandUseCategory;
     private Actions actions;
     private JavaScriptHelper javaScriptHelper;
     public EditFieldPage(WebDriver driver) {
@@ -43,6 +56,49 @@ public class EditFieldPage extends BasePage{
         return successMessage.getText();
 
     }
+    public void enterFieldSize(String fieldSize){
+        wait.until(ExpectedConditions.visibilityOf(fieldSizeTextBox)).click();
+        fieldSizeTextBox.sendKeys(fieldSize);
+    }
+    public void setSelectManagementDDL(String DDLValue){
+        wait.until(ExpectedConditions.visibilityOf(selectManagementDDL)).click();
+        actions.moveToElement(driver.findElement(By.xpath(("//div[contains(@id,'listbox')]//div[text()='"+DDLValue+"']")))).click().build().perform();
+    }
+    public void setSelectSoilPeat(String DDLValue){
+        staticWait(5000);
+        wait.until(ExpectedConditions.visibilityOf(selectSoilPeat)).click();
+        actions.moveToElement(driver.findElement(By.xpath("//div[contains(@id,'option-1') and text()='"+DDLValue+"']"))).click().build().perform();
+    }
+    public void setLandUseLocation(String DDLValue){
+        staticWait(5000);
+        wait.until(ExpectedConditions.elementToBeClickable(landUseLocation)).click();
+        actions.moveToElement(driver.findElement(By.xpath("(//div[contains(@id,'option-1') and text()='"+DDLValue+"'])[1]"))).click().build().perform();
+    }
+    public void setPrimaryLandUseCategory(String DDLValue){
+        staticWait(5000);
+        wait.until(ExpectedConditions.visibilityOf(primaryLandUseCategory)).click();
+        actions.moveToElement(driver.findElement(By.xpath("//div[contains(@id,'option-0') and text()='"+DDLValue+"'] "))).click().build().perform();
+
+    }
+    public void setPrimaryLandUseCategory1(String DDLValue){
+        staticWait(5000);
+        wait.until(ExpectedConditions.visibilityOf(primaryLandUseCategory)).click();
+        actions.moveToElement(driver.findElement(By.xpath("//div[contains(@id,'option-2') and text()='"+DDLValue+"'] "))).click().build().perform();
+
+    }
+    public void setSinceValue(String DDLValue){
+        staticWait(5000);
+        wait.until(ExpectedConditions.visibilityOf(since)).click();
+        actions.moveToElement(driver.findElement(By.xpath("//div[contains(@id,'option-0') and text()='"+DDLValue+"'] "))).click().build().perform();
+
+    }
+    public void setSinceValue1(String DDLValue){
+        staticWait(5000);
+        wait.until(ExpectedConditions.visibilityOf(since)).click();
+        actions.moveToElement(driver.findElement(By.xpath("//div[contains(@id,'option-1') and text()='"+DDLValue+"'] "))).click().build().perform();
+
+    }
+
     public void clickOnSaveButton(){
         wait.until(ExpectedConditions.elementToBeClickable(saveButton));
         javaScriptHelper.scrollUntilViewElement(saveButton);

@@ -34,7 +34,15 @@ public class HomePage extends BasePage{
     public void clickOnSandySetUPOptions(String linkToBeClicked){
         wait.until(ExpectedConditions.visibilityOf(sandySetUpLinkSubMenusComponent));
         staticWait(2000);
-        WebElement element=driver.findElement(By.xpath("//li//a[text()='"+linkToBeClicked+"']"));
+        WebElement element=driver.findElement(By.xpath("//li//a[contains(text(),'"+linkToBeClicked+"')]"));
+        System.out.println(element);
+        actions.moveToElement(element).click().build().perform();
+
+    }
+    public void clickOnActivityServices(String linkToBeClicked){
+        wait.until(ExpectedConditions.visibilityOf(sandySetUpLinkSubMenusComponent));
+        staticWait(2000);
+        WebElement element=driver.findElement(By.xpath("//li//span[text()='"+linkToBeClicked+"']"));
         System.out.println(element);
         actions.moveToElement(element).click().build().perform();
 

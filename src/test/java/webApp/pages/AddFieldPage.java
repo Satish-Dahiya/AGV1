@@ -16,20 +16,16 @@ public class AddFieldPage extends BasePage{
     private WebElement fieldNameTextBox;
     @FindBy(xpath = "//input[@id='fieldSize']")
     private WebElement fieldSizeTextBox;
-    @FindBy(xpath = "(//div[@class='css-1lfj4wt-indicatorContainer']//following::*[name()='svg' and @class='css-8mmkcg'])[1]")
+    @FindBy(xpath = "(//div[contains(@id,'react-select') and text()='Select management type'])[1]")
     private WebElement selectManagementDDL;
-    @FindBy(xpath = "(//div[@class='css-1lfj4wt-indicatorContainer']//following::*[name()='svg' and @class='css-8mmkcg'])[3]")
+    @FindBy(xpath = "//div[contains(@id,'react-select') and text()='Select soil peat']")
     private WebElement selectSoilPeat;
-    @FindBy(xpath = "(//div[@class='css-1lfj4wt-indicatorContainer']//following::*[name()='svg' and @class='css-8mmkcg'])[5]")
+    @FindBy(xpath = "//div[contains(@id,'react-select') and text()='Select land use change']")
     private WebElement landUseLocation;
     @FindBy(xpath = "(//div[contains(@id,'react-select') and text()='Since'])[1]")
     private WebElement since;
-    @FindBy(xpath = "(//div[contains(@id,'react-select') and text()='Since'])[2]")
-    private WebElement since1;
     @FindBy(xpath = "(//div[contains(@id,'react-select') and text()='Add Primary land use'])[1]")
     private WebElement primaryLandUseCategory;
-    @FindBy(xpath = "(//div[contains(@id,'react-select') and text()='Add Primary land use'])[2]")
-    private WebElement primaryLandUseCategoryOne;
 
     @FindBy(xpath = "//button[text()='Save']")
     private WebElement saveButton;
@@ -63,12 +59,14 @@ public class AddFieldPage extends BasePage{
         actions.moveToElement(driver.findElement(By.xpath(("//div[contains(@id,'listbox')]//div[text()='"+DDLValue+"']")))).click().build().perform();
     }
     public void setSelectSoilPeat(String DDLValue){
+        staticWait(5000);
         wait.until(ExpectedConditions.visibilityOf(selectSoilPeat)).click();
-        actions.moveToElement(driver.findElement(By.xpath("(//div[text()='"+DDLValue+"'])[1]"))).click().build().perform();
+        actions.moveToElement(driver.findElement(By.xpath("//div[contains(@id,'option-0') and text()='"+DDLValue+"']"))).click().build().perform();
     }
     public void setLandUseLocation(String DDLValue){
-        wait.until(ExpectedConditions.visibilityOf(landUseLocation)).click();
-        actions.moveToElement(driver.findElement(By.xpath("(//div[text()='"+DDLValue+"'])[1]"))).click().build().perform();
+        staticWait(5000);
+        wait.until(ExpectedConditions.elementToBeClickable(landUseLocation)).click();
+        actions.moveToElement(driver.findElement(By.xpath("(//div[contains(@id,'option-0') and text()='"+DDLValue+"'])[1]"))).click().build().perform();
     }
     public void setPrimaryLandUseCategory(String DDLValue){
         staticWait(5000);
@@ -78,8 +76,8 @@ public class AddFieldPage extends BasePage{
     }
     public void setPrimaryLandUseCategory1(String DDLValue){
         staticWait(5000);
-        wait.until(ExpectedConditions.visibilityOf(primaryLandUseCategoryOne)).click();
-        actions.moveToElement(driver.findElement(By.xpath("//div[contains(@id,'option-0') and text()='"+DDLValue+"'] "))).click().build().perform();
+        wait.until(ExpectedConditions.visibilityOf(primaryLandUseCategory)).click();
+        actions.moveToElement(driver.findElement(By.xpath("//div[contains(@id,'option-2') and text()='"+DDLValue+"'] "))).click().build().perform();
 
     }
     public void setSinceValue(String DDLValue){
@@ -90,8 +88,8 @@ public class AddFieldPage extends BasePage{
     }
     public void setSinceValue1(String DDLValue){
         staticWait(5000);
-        wait.until(ExpectedConditions.visibilityOf(since1)).click();
-        actions.moveToElement(driver.findElement(By.xpath("//div[contains(@id,'option-0') and text()='"+DDLValue+"'] "))).click().build().perform();
+        wait.until(ExpectedConditions.visibilityOf(since)).click();
+        actions.moveToElement(driver.findElement(By.xpath("//div[contains(@id,'option-1') and text()='"+DDLValue+"'] "))).click().build().perform();
 
     }
     public void clickOnSaveButton(){

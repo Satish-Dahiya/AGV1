@@ -1,4 +1,4 @@
-Feature: add farm feature
+Feature: add field feature
 
   @componentTest1
   Scenario: verify add farm

@@ -11,7 +11,7 @@ import webApp.utils.JavaScriptHelper;
 public class FieldSetUpPage extends BasePage{
     @FindBy(xpath = "//h3[contains(text(),'Setup- Fields')]")
     private WebElement fieldSetUpPage;
-    @FindBy(xpath = "(//button[text()='Manage data'])[20]")
+    @FindBy(xpath = "(//div[contains(@class,'row')]//child::div[text()='##Test_Far']//following::button[text()='Manage data'])[1]")
     private WebElement manageDataButton;
 JavaScriptHelper javaScriptHelper;
 Actions actions;

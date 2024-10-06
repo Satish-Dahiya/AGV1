@@ -30,4 +30,34 @@ public class EditFieldStepDefination {
     public void iClickOnSaveButtonFromEditFieldPage() {
         editFieldPage.clickOnSaveButton();
     }
+
+    @And("I update field size as {string}")
+    public void iUpdateFieldSizeAs(String size) {
+        editFieldPage.enterFieldSize(size);
+    }
+
+    @And("I update management type as {string}")
+    public void iUpadateManagementTypeAs(String managementType) {
+        editFieldPage.setSelectManagementDDL(managementType);
+    }
+
+    @And("I update soil peat as {string}")
+    public void iUpdateSoilPeatAs(String soilPeat) {
+        editFieldPage.setSelectSoilPeat(soilPeat);
+    }
+
+    @And("I update primary category as {string}")
+    public void iUpdatePrimaryCategoryAs(String primaryCategory) {
+        editFieldPage.setPrimaryLandUseCategory1(primaryCategory);
+    }
+
+    @And("I update since as {string}")
+    public void iUpdateSinceAs(String since) {
+        editFieldPage.setSinceValue(since);
+    }
+
+    @And("I update land use location as {string} from edit page")
+    public void iUpdateLandUseLocationAsFromEditPage(String location) {
+        editFieldPage.setLandUseLocation(location);
+    }
 }

@@ -45,4 +45,19 @@ fieldListPage.getPageTitle();
     @Then("i should get {string} successMessage")
     public void iShouldGetSuccessMessage(String arg0) {
     }
+    @When("i click on edit Multiple")
+    public void iClickOnEditMultiple() {
+        fieldListPage.clickOnEditMutiple();
+
+    }
+
+    @And("click on select all")
+    public void clickOnSelectAll() {
+        fieldListPage.clickOnSelectAll();
+    }
+
+    @When("i click on edit selected")
+    public void iClickOnEditSelected() {
+        fieldListPage.clickOnEditSelected();
+    }
 }

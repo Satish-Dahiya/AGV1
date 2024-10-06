@@ -22,7 +22,12 @@ public class FieldListPage extends BasePage{
     private WebElement deleteModal;
     @FindBy(xpath = "//button[text()='Yes, delete']")
     private WebElement yesDeleteButton;
-
+    @FindBy(xpath = "//button[text()='Edit multiple']")
+    private WebElement editMultipleButton;
+    @FindBy(xpath = "//button[text()='Edit selected']")
+    private WebElement editSelectedButton;
+    @FindBy(xpath = "//button[text()='Select All']")
+    private WebElement selectAllButton;
     @FindBy(xpath = "//iframe[@id='intercom-frame']")
     private WebElement successMessageFrame;
     @FindBy(xpath = "//div[text()='Your records have been successfully deleted.']")
@@ -36,8 +41,9 @@ public class FieldListPage extends BasePage{
         return wait.until(ExpectedConditions.visibilityOf(addFarmSetUpPageTitle)).isDisplayed();
     }
     public void clickOnAddField(){
+        wait.until(ExpectedConditions.elementToBeClickable(addFieldButton));
         staticWait(5000);
-        wait.until(ExpectedConditions.elementToBeClickable(addFieldButton)).click();
+        addFieldButton.click();
     }
     public void clickOnEditButton(String fieldName){
         wait.until(ExpectedConditions.visibilityOf(addFarmSetUpPageTitle)).isDisplayed();
@@ -59,5 +65,17 @@ driver.findElement(By.xpath("(//div[text()='"+fieldName+"']//following::*[name()
         wait.until(ExpectedConditions.invisibilityOf(successMessageFrame));
         return successMessage.getText();
 
+    }
+    public void clickOnEditMutiple(){
+        wait.until(ExpectedConditions.invisibilityOf(loader));
+        wait.until(ExpectedConditions.elementToBeClickable(editMultipleButton)).click();
+    }
+    public void clickOnSelectAll(){
+        wait.until(ExpectedConditions.invisibilityOf(loader));
+        wait.until(ExpectedConditions.elementToBeClickable(selectAllButton)).click();
+    }
+    public void clickOnEditSelected(){
+        wait.until(ExpectedConditions.invisibilityOf(loader));
+        wait.until(ExpectedConditions.elementToBeClickable(editSelectedButton)).click();
     }
 }

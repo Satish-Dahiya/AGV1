@@ -31,6 +31,10 @@ public class HomePageStepDefination {
     public void iClickOnLink(String linkToBeSelected) {
         homePage.clickOnSandySetUPOptions(linkToBeSelected);
     }
+    @And("I click on {string} link button")
+    public void iClickOnLinkbutton(String linkToBeSelected) {
+        homePage.clickOnActivityServices(linkToBeSelected);
+    }
 
     @Then("I should see farm setup page")
     public void iShouldSeeFarmSetupPage() {
