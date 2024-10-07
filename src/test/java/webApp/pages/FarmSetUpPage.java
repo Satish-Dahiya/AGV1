@@ -35,7 +35,8 @@ public class FarmSetUpPage extends BasePage{
        return wait.until(ExpectedConditions.visibilityOf(farmSetUpPageTitle)).getText();
     }
     public void clickOnAddFarm(){
-        wait.until(ExpectedConditions.elementToBeClickable(addFarmButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(addFarmButton));
+        actions.moveToElement(addFarmButton).click().build().perform();
     }
     public void selectPageValue(){
         wait.until(ExpectedConditions.elementToBeClickable(pagesDDL));

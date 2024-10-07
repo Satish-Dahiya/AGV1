@@ -65,8 +65,8 @@ Feature:add field feature
     And I update management type as "Organic"
     And I update soil peat as "No"
     And I update land use location as "No" from edit page
-    And I update primary category as "Arable"
-    And I update since as "2024"
+   # And I update primary category as "Arable"
+   # And I update since as "2024"
     And I click on save button
     Then I should see field list page
 

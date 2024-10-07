@@ -30,7 +30,7 @@ public class AddFarmModalPage extends BasePage{
     private WebElement plusIcon;
     @FindBy(xpath = "//input[@class='number']")
     private WebElement yearOfDataTextBox;
-    @FindBy(xpath = " (//*[name()='circle'])[13]")
+    @FindBy(xpath = "//div[@class='enterprise-title']//parent::div[@class='icon_column col']")
     private WebElement enterPriseArable;
     @FindBy(xpath = "//button[@type='button' and text()='Save']")
     private WebElement saveButton;
@@ -98,6 +98,7 @@ private JavaScriptHelper javaScriptHelper;
          saveButton.click();
     }
     public void enterLatitude(String latitudeValue){
+        staticWait(5000);
         wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(farmLatitude)));
         javaScriptHelper.scrollUntilViewElement(farmLatitude);
         farmLatitude.click();
@@ -105,6 +106,7 @@ private JavaScriptHelper javaScriptHelper;
 
     }
     public void enterLongitude(String longitudeValue){
+        staticWait(5000);
         wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(farmLongitude)));
         javaScriptHelper.scrollUntilViewElement(farmLongitude);
         farmLongitude.click();

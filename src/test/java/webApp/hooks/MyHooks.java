@@ -21,7 +21,7 @@ public class MyHooks {
         this.context = context;
     }
 
-    @Before("@EditMultiple")
+    @Before("@EditFarm")
     public void before(Scenario scenario){
         System.out.println("BEFORE: THREAD ID : " + Thread.currentThread().getId() + "," +
                 "SCENARIO NAME: " + scenario.getName());
@@ -29,7 +29,7 @@ public class MyHooks {
         context.driver = driver;
     }
 
-    @After("@EditMultiple")
+    @After("@EditFarm")
     public void after(Scenario scenario){
         System.out.println("AFTER: THREAD ID : " + Thread.currentThread().getId() + "," +
                 "SCENARIO NAME: " + scenario.getName());

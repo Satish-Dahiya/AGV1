@@ -7,21 +7,11 @@
     <list default="true" id="36225833-d37f-4738-95b1-620df243bb58" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/webApp/hooks/MyHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/hooks/MyHooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/AddFieldPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/AddFieldPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/EditFieldPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/EditFieldPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/FieldListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/FieldListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/FieldSetUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/FieldSetUpPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/PageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/PageFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/AddFarmModalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/AddFarmModalPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/EditFarmPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/EditFarmPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/FarmSetUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/FarmSetUpPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/webApp/runner/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/runner/ApplicationRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/stepDefinations/AddFieldPageStepDefination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/stepDefinations/AddFieldPageStepDefination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/stepDefinations/EditFieldStepDefination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/stepDefinations/EditFieldStepDefination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/stepDefinations/FieldListStepDefination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/stepDefinations/FieldListStepDefination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/stepDefinations/FieldSetUpPageStepDefination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/stepDefinations/FieldSetUpPageStepDefination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/stepDefinations/HomePageStepDefination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/stepDefinations/HomePageStepDefination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/webApp/farm_setup.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/webApp/farm_setup.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/webApp/field_setup.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/webApp/field_setup.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

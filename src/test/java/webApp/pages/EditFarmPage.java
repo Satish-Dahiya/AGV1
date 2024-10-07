@@ -16,7 +16,7 @@ public class EditFarmPage extends BasePage{
     private WebElement loader;
     @FindBy(xpath = "//iframe[@id='intercom-frame']")
     private WebElement successMessageFrame;
-    @FindBy(xpath = "//div[text()='Farm Updated Successfully.']")
+    @FindBy(xpath = "//div[contains(text(),'Farm Updated Successfully'])")
     private WebElement successMessage;
     @FindBy(xpath = "//button[@type='button' and text()='Save']")
     private WebElement saveButton;
@@ -46,7 +46,6 @@ public class EditFarmPage extends BasePage{
         wait.until(ExpectedConditions.elementToBeClickable(saveButton));
         javaScriptHelper.scrollUntilViewElement(saveButton);
         staticWait(5000);
-        wait.until(ExpectedConditions.visibilityOf(saveButton));
-        saveButton.click();
+saveButton.click();
     }
 }
