@@ -62,4 +62,4 @@ Feature: add field feature
     Then I should see edit farm "Edit Farm" page title
     When I update farm name as "##Test_Onb"
     And I click on save button from edit farm page
-#    Then I should see "Farm Updated Successfully." success message for edit farm
+    Then I should see "Farm Updated Successfully." success message for edit farm

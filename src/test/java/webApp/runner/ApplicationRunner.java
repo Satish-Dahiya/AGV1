@@ -14,7 +14,7 @@ import org.testng.annotations.DataProvider;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },
 
         glue = {"webApp"},
-            tags = "@EditFarm"
+            tags = "@FiledSetUp"
 
 
 

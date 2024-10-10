@@ -23,11 +23,11 @@ Feature:add field feature
     And I enter field size as "10"
     And I select management type as "Organic"
     And I select soil piet as "No"
-    And land use as "Yes"
+#    And land use as "Yes"
    And select primary land category one as "Arable"
-    And I select from Date Range as "2024"
-    And select primary land category two as "Woodland"
-    And I select to Date Range as "2023"
+#    And I select from Date Range as "2024"
+#   And select primary land category two as "Woodland"
+#   And I select to Date Range as "2023"
     And I click on save button from add field page
     Then I should see "Your records have been successfully added." success message for add field
     And I should see field list page

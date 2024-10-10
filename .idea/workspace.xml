@@ -7,11 +7,9 @@
     <list default="true" id="36225833-d37f-4738-95b1-620df243bb58" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/webApp/hooks/MyHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/hooks/MyHooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/AddFarmModalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/AddFarmModalPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/EditFarmPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/EditFarmPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/FarmSetUpPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/FarmSetUpPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/webApp/pages/AddFieldPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/pages/AddFieldPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/webApp/runner/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/webApp/runner/ApplicationRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/webApp/farm_setup.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/webApp/farm_setup.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/webApp/field_setup.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/webApp/field_setup.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

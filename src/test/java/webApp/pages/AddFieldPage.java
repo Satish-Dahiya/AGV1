@@ -61,7 +61,7 @@ public class AddFieldPage extends BasePage{
     public void setSelectSoilPeat(String DDLValue){
         staticWait(5000);
         wait.until(ExpectedConditions.visibilityOf(selectSoilPeat)).click();
-        actions.moveToElement(driver.findElement(By.xpath("//div[contains(@id,'option-0') and text()='"+DDLValue+"']"))).click().build().perform();
+        actions.moveToElement(driver.findElement(By.xpath("//div[contains(@id,'option-1') and text()='"+DDLValue+"']"))).click().build().perform();
     }
     public void setLandUseLocation(String DDLValue){
         staticWait(5000);
